@@ -1,0 +1,60 @@
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    //bar chart
+    let mchart = document.getElementById('barChart').getContext('2d');
+    let barChart = new Chart(mchart, {
+      type:'bar',
+      backgroundColor:'none',
+      data:{
+        labels:['Monday' , 'Tuesday' ,'Wednesday' , 'Thursday', 'Friday' , 'Saturday' , 'Sunday'],
+        datasets: [{
+        label : 'Days',
+        data: [65, 59, 80, 81, 56, 55, 40],
+        backgroundColor : '#f8c419',
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'ddddd',
+          fontSize:25  
+        },
+        legend : {
+          display: false,
+          position: 'right', 
+        }
+      }
+    })
+
+    //circle chart
+    let Cchart = document.getElementById('circleChart').getContext('2d');
+    let cirChart = new Chart(Cchart, {
+      type:'doughnut',
+      backgroundColor:'none',
+      data:{
+        labels:['Monday' , 'Tuesday' ],
+        datasets: [{
+        label : 'Days',
+        data: [65, 59],
+        backgroundColor : [
+          '#866fd9',
+          '#f8c419'
+        ],
+        hoverOffset: 4
+        }]
+      },
+      options: {
+        doughnutlabel: {
+          labels: [{
+          text: '550',
+            font: {
+              size: 20,
+              weight: 'bold'
+            }
+          }]
+        }
+    }
+});
+  </script>
+</body>
+</html>
