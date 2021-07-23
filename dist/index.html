@@ -19,7 +19,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- our own css -->
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js" ></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.0/dist/Chart.min.js"></script> -->
+    
+    
 
     <title>FORCELOG</title>  
   </head>
@@ -70,7 +72,7 @@
                     <img class="logoForce" src="images/forcelogLogo.png" alt="">
                     </a>
                 </li>
-            
+                <hr class="line" />
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
@@ -406,8 +408,18 @@
                 </div>
                 <div class="charts circleBar">
                     <p class="para-size titre">Total Colis : 2575</p>
-                    <p class="status Supara-size">July 09, 2020</p>
+                    <p class="status Supara-size">Colis par status</p>
                     <canvas id="circleChart" ></canvas>
+                    <div class="labelCircle">
+                        <div class="livre">
+                            <div class="livreeSign"></div>
+                            <p class="labelTitle">Livree</p>
+                        </div>
+                        <div  class="retourne">
+                            <div  class="retourneSign"></div>
+                            <p  class="labelTitle">Retourne</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="secondLineChart">
@@ -537,7 +549,7 @@
                     <i class="fas fa-credit-card fa-2x"></i>
                     <h3 class="earningsDetails">Total des gains 1253.18</h3>
                 </div>
-                    <hr/>
+                    <hr class="line"/>
                 <div class="gainColis">
                     <i class="fas fa-credit-card fa-2x"></i>
                     <h3 class="earningsDetails">Total des gains 1253.18</h3>
@@ -559,7 +571,9 @@
 </div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.0/dist/Chart.min.js"></script>
+  <script src="js/chartjs-plugin-doughnutlabel.min.js" ></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
   <script>
     //bar chart
     let mchart = document.getElementById('barChart').getContext('2d');
@@ -570,16 +584,12 @@
         labels:['Monday' , 'Tuesday' ,'Wednesday' , 'Thursday', 'Friday' , 'Saturday' , 'Sunday'],
         datasets: [{
         label : 'Days',
-        data: [65, 59, 80, 81, 56, 55, 40],
+        data: [65, 59, 80, 81, 56, 55, 60],
         backgroundColor : '#f8c419',
         }]
       },
       options:{
-        title:{
-          display:true,
-          text:'ddddd',
-          fontSize:25  
-        },
+        
         legend : {
           display: false,
           position: 'right', 
@@ -596,7 +606,7 @@
         labels:['Monday' , 'Tuesday' ],
         datasets: [{
         label : 'Days',
-        data: [65, 59],
+        data: [65, 35],
         backgroundColor : [
           '#866fd9',
           '#f8c419'
@@ -605,17 +615,38 @@
         }]
       },
       options: {
-        doughnutlabel: {
-          labels: [{
-          text: '550',
-            font: {
-              size: 20,
-              weight: 'bold'
-            }
-          }]
+        responsive: true,
+        legend: {
+          // paddingBelowLegends: false,
+          // padding: 20,
+          display: false,
+          position: 'bottom',
+          boxWidth: 20
+        },
+        title: {
+          display: false,
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        },
+        plugins: {
+          doughnutlabel: {
+            labels: [ 
+              {
+                text: "65%",
+                font: {
+                  size: '20',
+                  family: 'Josefin Sans, sans-serif',
+                  weight: 'bold'
+                },
+                color: '#866fd9'
+              }
+            ]
+          }
         }
-    }
-});
+       }  
+    });
   </script>
 </body>
 </html>

@@ -17,6 +17,7 @@ body{
                 h1{
                     color: #483b79;
                     font-weight: 600;
+                    padding-top: 1rem;
                 }
                 p{
                     color: #868686;
@@ -34,12 +35,15 @@ body{
                     border-radius: 10px;
                     margin: 2rem;
                     border: none;
+                    cursor: pointer;
+                    height: 1rem;
                 }
                 input{
                     border: none;
                     border-radius: 10px;
                     padding: 1rem;
                     margin: 2rem;
+                    height: 1rem;
                 }
             }
         }
@@ -65,6 +69,38 @@ body{
                     .titre{
                         line-height: 1.7;
                     }
+                    .labelCircle{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 2rem 3rem 0rem 3rem;
+                        .livre{
+                            display: flex;
+                            .livreeSign{
+                                border-radius: 50%;
+                                width: 1rem;
+                                height: 1rem;
+                                background-color: #866fd9;
+                            }
+                            .labelTitle{
+                                font-size: 1.2em;
+                                padding-left: .5rem;
+                            }
+                        }
+
+                        .retourne{
+                            display: flex;
+                            .retourneSign{
+                                border-radius: 50%;
+                                width: 1rem;
+                                height: 1rem;
+                                background-color: #f8c419;
+                            }
+                            .labelTitle{
+                                font-size: 1.2em;
+                                padding-left: .5rem;
+                            }
+                        }
+                    }
                 }
                 .charts{
                     background-color: white;
@@ -86,10 +122,12 @@ body{
                         width: 600px!important;
                         height: 235px!important;
                         margin: auto;
+                        padding-top: 3rem;
                     }
                     #circleChart{
-                        width: 220px!important;
-                        height: 220px!important;
+                        width: 350px!important;
+                        height: 185px!important;
+                        padding-top: 3rem;
                         margin: auto;
                     }
                 }

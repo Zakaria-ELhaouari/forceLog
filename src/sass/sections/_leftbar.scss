@@ -38,11 +38,16 @@ body::-webkit-scrollbar-thumb {
             .navbar-nav{
                 list-style: none;
                 padding: 0;
-                // margin-left: 1rem;
-                
                 display: flex;
                 flex-direction: column;
                 height: 100%;
+                .line{
+                    background-color: #d2cbed;
+                    border: none;
+                    height: 1px;
+                    width: 60%;
+                    margin: 0rem auto 4rem auto;    
+                }
                 .logo {
                     // font-weight: bold;
                     // text-transform: uppercase;
@@ -55,7 +60,7 @@ body::-webkit-scrollbar-thumb {
                         .nav-link{
                             .logoForce{
                                 width: 90%;
-                                margin: 4rem 0.5rem;
+                                margin: 4rem .5rem 2rem .5rem;
                             }
                         }
                         // svg {
@@ -74,6 +79,7 @@ body::-webkit-scrollbar-thumb {
                 .nav-item{
                     margin: 0rem auto;
                     width: 100%;
+                    padding-bottom: 1rem;
                     &:last-child {
                         margin-top: auto;
                     }
