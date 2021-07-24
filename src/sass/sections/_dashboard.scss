@@ -33,19 +33,31 @@ body{
                     background-color: #f8c419;
                     color: white;
                     padding: 1rem 1rem;
-                    border-radius: 10px;
+                    border-radius: 25px;
                     border: none;
                     cursor: pointer;
                     height: 1rem;
                     font-size: 1.2rem;
                     margin-right: 2rem;
                 }
+                .form-control-feedback {
+                    position: absolute;
+                    z-index: 2;
+                    right: 43rem;
+                    display: block;
+                    /* width: 0.375rem; */
+                    /* height: 60.375rem; */
+                    line-height: 3rem;
+                    text-align: center;
+                    pointer-events: none;
+                }
                 input{
                     border: none;
-                    border-radius: 10px;
+                    border-radius: 25px;
                     padding: 1rem;
                     margin-right: 2rem;
                     height: 1rem;
+                    color: #dedede;
                 }
             }
         }
