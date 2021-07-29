@@ -19,12 +19,27 @@ body::-webkit-scrollbar-thumb {
     &__left{
         display: flex;
         &-menu{
-            height: 100vh;
+            // height: 100vh;
+            height: 100%;
             top: 0;
             width: 10rem;
             position: fixed;
             background-color: #fff;
             transition: width 600ms ease;
+            @include responsive(tab-land) { // width < 1200?
+                width: 5rem;
+                // height: 110vh;
+            }
+            // @include custom_media(1050) {
+            //     @media screen and (max-width: (1050 / 16)*1em) { 
+            //         height: 115vh;
+            //      };
+            // }
+            // @include custom_media(1010) {
+            //     @media screen and (max-width: (1010 / 16)*1em) { 
+            //         height: 120vh;
+            //      };
+            // }
             &:hover{
                 width: 16rem;
                 .navbar-nav{
@@ -61,6 +76,9 @@ body::-webkit-scrollbar-thumb {
                             .logoForce{
                                 width: 90%;
                                 margin: 4rem .5rem 2rem .5rem;
+                                @include responsive(tab-land) { // width < 1200?
+                                    margin: 4rem .3rem 2rem .3rem;
+                                }
                             }
                         }
                         // svg {

@@ -1,5 +1,6 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.0/dist/Chart.min.js"></script>
   <script src="js/chartjs-plugin-doughnutlabel.min.js" ></script>
+  <script src="js/chartjs-plugin-style.min.js" ></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
   <script>
     //bar chart
@@ -16,11 +17,42 @@
         }]
       },
       options:{
-        
+        tooplips: {
+
+          bevelWidth: 3,
+
+          bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
+
+          bevelShadowColor: 'rgba(0, 0, 0, 0.5)',
+          shadowOffsetX: 3,
+
+          shadowOffsetY: 3,
+
+          shadowBlur: 10,
+
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+
+        },
         legend : {
           display: false,
           position: 'right', 
+        },
+        plugins: {
+          scales: {
+            y: {
+              min: 0,
+              max: 100,
+              ticks: {
+                // forces step size to be 50 units
+                stepSize: 50
+              }
+      }
+    }
         }
+        // legend : {
+        //   display: false,
+        //   position: 'right', 
+        // }
       }
     })
 
