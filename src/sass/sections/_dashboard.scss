@@ -110,6 +110,9 @@ body{
             @include responsive(tab-land) { // width < 1200?
                 padding: 0 4rem;
             }
+            @include responsive(tab-port-1) { // width < 1200?
+                padding: 0 1rem 1rem 4rem;
+            }
 
             .firstlineChart{
                 display: grid;
@@ -213,6 +216,10 @@ body{
                         @include responsive(tab-port) { // width < 1200?
                             width: 430px!important;
                             height: 170px!important;
+                        }
+                        @include responsive(tab-port-1) { // width < 1200?
+                            width: 416px!important;
+                            height: 185px!important;
                         }
                     }
                     #circleChart{
