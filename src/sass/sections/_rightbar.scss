@@ -11,11 +11,17 @@
                 @include responsive(tab-land) { // width < 1200?
                     left: 18rem;
                 }
+                @include responsive(tab-port) { // width < 1200?
+                    left: 14rem;
+                }
             }
         }
         
         &-profile{
             padding: 4rem;
+            @include responsive(tab-land-1) { // width < 1200?
+                padding: 4rem 2rem;
+            }
             .photo{
                 background-image: url("../images/profile.png");
                 border-radius: 50%;
@@ -61,6 +67,9 @@
                     display: flex;
                     justify-content: center;
                     padding: 1rem;
+                    @include responsive(tab-land-1) { // width < 1200?
+                        display: block;
+                    }
                     .fas{
                         margin-right: 1rem;
                         border-radius: 5px;

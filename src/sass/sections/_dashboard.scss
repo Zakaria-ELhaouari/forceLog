@@ -72,18 +72,21 @@ body{
                     @include responsive(tab-land) { // width < 1200?
                         right: 29rem;
                     }
-                    @include custom_media(1180) {
-                        @media screen and (max-width: (1180 / 16)*1em) { 
-                            right: 21rem;
-                         };
-                    }
+                    // @include custom_media(1180) {
+                    //     @media screen and (max-width: (1180 / 16)*1em) { 
+                    //         right: 21rem;
+                    //      };
+                    // }
                     // @include custom_media(1180) { 
                     //     right: 18rem;
                     // }
-                    @include custom_media(1050) {
-                        @media screen and (max-width: (1050 / 16)*1em) { 
-                            right: 10rem;
-                         };
+                    // @include custom_media(1050) {
+                    //     @media screen and (max-width: (1050 / 16)*1em) { 
+                    //         right: 10rem;
+                    //      };
+                    // }
+                    @include responsive(tab-port) { // width < 1200?
+                        right: 19rem;
                     }
                 }
                 input{
@@ -137,6 +140,9 @@ body{
                         display: flex;
                         justify-content: space-between;
                         padding: 5rem 3rem 0;
+                        @include responsive(tab-port) { // width < 1200?
+                            padding: 2rem 3rem 0;
+                        }
                         .livre{
                             display: flex;
                             .livreeSign{
@@ -199,6 +205,14 @@ body{
                         // }
                         @include responsive(tab-land) { // width < 1200?
                             height: 190px!important;
+                        }
+                        // @include responsive(tab-port) { // width < 1200?
+                        //     height: 170px!important;
+                        //     width: 521px!important;
+                        // }
+                        @include responsive(tab-port) { // width < 1200?
+                            width: 430px!important;
+                            height: 170px!important;
                         }
                     }
                     #circleChart{
