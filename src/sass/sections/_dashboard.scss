@@ -214,8 +214,8 @@ body{
                         margin: 0;
                     }
                     #barChart{
-                        width: 196px!important;
-                        height: 108px!important;
+                        width: 600px!important;
+                        height: 235px!important;
                         margin: auto;
                         padding-top: 3rem;
                         // @include custom_media(1050) {
@@ -243,10 +243,14 @@ body{
                         }
                     }
                     #circleChart{
-                        width: 195px!important;
-                        height: 110px!important;
+                        // width: 195px!important;
+                        // height: 110px!important;
                         padding-top: 3rem;
                         margin: auto;
+                        @include responsive(tab-port-1) { // width < 1200?
+                            width: 195px!important;
+                            height: 110px!important;
+                        }
                     }
                 }
             }
