@@ -72,21 +72,17 @@ body{
                     @include responsive(tab-land) { // width < 1200?
                         right: 29rem;
                     }
-                    // @include custom_media(1180) {
-                    //     @media screen and (max-width: (1180 / 16)*1em) { 
-                    //         right: 21rem;
-                    //      };
-                    // }
-                    // @include custom_media(1180) { 
-                    //     right: 18rem;
-                    // }
-                    // @include custom_media(1050) {
-                    //     @media screen and (max-width: (1050 / 16)*1em) { 
-                    //         right: 10rem;
-                    //      };
-                    // }
-                    @include responsive(tab-port) { // width < 1200?
-                        right: 19rem;
+                    @include responsive(tab-port) { // width < 900?
+                        right: 24rem !important;
+                    }
+                    @include responsive(tab-port-1) { // width < 800?
+                        right: 11rem;
+                    }
+                    @include responsive(tab-land-1) { // width < 1024?
+                        right: 22rem;
+                    }
+                    @include responsive(big-desktop) { // width < 1800?
+                        right: 45rem;
                     }
                 }
                 input{
@@ -102,16 +98,17 @@ body{
         &-chart{
             padding: 0 8rem;
             margin: inherit;
-            // @include custom_media(1050) {
-            //     @media screen and (max-width: (1050 / 16)*1em) { 
-            //         padding: 0 4rem;
-            //      };
-            // }
+            @include responsive(tab-port) { // width < 900?
+                padding: 0 !important;
+            }
             @include responsive(tab-land) { // width < 1200?
                 padding: 0 4rem;
             }
-            @include responsive(tab-port-1) { // width < 1200?
-                padding: 0 1rem 1rem 4rem;
+            // @include responsive(tab-port-1) { // width < 1200?
+            //     padding: 0 1rem 1rem 4rem;
+            // }
+            @include responsive(tab-land-1) { // width < 1024?
+                padding: 0px 2rem;
             }
 
             .firstlineChart{
@@ -128,6 +125,10 @@ body{
                     padding: 1rem 3rem 2rem 2rem;
                     @include responsive(tab-land) { // width < 1200?
                         margin-left: 3rem;
+                        width: 80%;
+                    }
+                    @include responsive(tab-land-1) { // width < 1024?
+                        margin-left: 5rem;
                     }
                     .titre{
                         line-height: 1.7;
@@ -145,6 +146,12 @@ body{
                         padding: 5rem 3rem 0;
                         @include responsive(tab-port) { // width < 1200?
                             padding: 2rem 3rem 0;
+                        }
+                        @include responsive(big-desktop) { 
+                            padding: 3rem 3rem 0;
+                        }
+                        @include responsive(small-desktop) { 
+                            padding: 3rem 3rem 0;
                         }
                         .livre{
                             display: flex;
@@ -209,6 +216,9 @@ body{
                         @include responsive(tab-land) { // width < 1200?
                             height: 190px!important;
                         }
+                        @include responsive(tab-land-1) { // width < 1024?
+                            width: 512px!important
+                        }
                         // @include responsive(tab-port) { // width < 1200?
                         //     height: 170px!important;
                         //     width: 521px!important;
@@ -240,6 +250,9 @@ body{
                     width: 100%;
                     @include responsive(tab-land) { // width < 1200?
                         margin-left: 3rem;
+                    }
+                    @include responsive(tab-land-1) { // width < 1024?
+                        margin-left: 5rem;
                     }
                     // margin: 1em;
                     padding-bottom: 1em;
@@ -308,6 +321,11 @@ body{
                     margin-top: 1em;
                     margin-left: 4em;
                     padding-bottom: 1em;
+                    @include responsive(tab-land-1) { // width < 1024?
+                        width: 84%;
+                        margin-top: 1em;
+                        margin-left: 6em;
+                    }
                     .facturation{
                         &:hover{
                             -webkit-box-shadow: 26px 22px 124px -40px rgba(63,43,135,0.1);
