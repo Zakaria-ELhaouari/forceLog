@@ -13,7 +13,7 @@
                 }
                 @include responsive(tab-port) { // width < 900?
                     left: 11rem;
-                    width: 70%;
+                    width: 70% !important;
                 }
                 @include responsive(tab-land-1) { // width < 1024?
                     left: 11rem;
