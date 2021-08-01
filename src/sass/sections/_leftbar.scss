@@ -169,9 +169,12 @@ body::-webkit-scrollbar-thumb {
                 }
             }
             li {
-                
-                width: 230px;
+                width: 21rem;
                 text-indent: 56px;
+                @include responsive(phone) { // width < 1200?
+                    width: 18rem;
+                    // text-indent: 56px;
+                }
             }
             a:focus {
                 display: block;
