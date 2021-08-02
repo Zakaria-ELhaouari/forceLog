@@ -33,6 +33,9 @@ body{
                 @include responsive(tab-land) { // width < 1200?
                     margin-left: 2rem;
                 }
+                @include responsive(iphone-1) { // width < 320?
+                    margin-left: 0rem;
+                }
                 h1{
                     color: #483b79;
                     font-weight: 600;
@@ -48,6 +51,9 @@ body{
                 justify-content: flex-end;
                 padding: 0.5rem 1rem;
                 margin: 2rem 0;
+                @include responsive(iphone-1) { // width < 320?
+                    margin: 1rem 0;
+                }
                 button{
                     background-color: #f8c419;
                     color: white;
@@ -60,6 +66,9 @@ body{
                     margin-right: 2rem;
                     @include responsive(phone) { // width < 600?
                         font-size: 1rem;
+                    }
+                    @include responsive(iphone-1) { // width < 320?
+                        font-size: .8rem;
                     }
                 }
                 .form-control-feedback {
@@ -89,6 +98,15 @@ body{
                     }
                     @include responsive(phone) { // width < 600?
                         right: 22rem !important;
+                    }
+                    @include responsive(phone-1) { // width < 480?
+                        right: 6rem!important;
+                    }
+                    @include responsive(iphone) { // width < 375px?
+                        right: -5rem !important;
+                    }
+                    @include responsive(iphone-1) { // width < 320px?
+                        right: 6rem!important;
                     }
                 }
                 input{
@@ -241,21 +259,12 @@ body{
                         height: 235px!important;
                         margin: auto;
                         padding-top: 3rem;
-                        // @include custom_media(1050) {
-                        //     @media screen and (max-width: (1050 / 16)*1em) { 
-                        //         height: 208px!important;
-                        //      };
-                        // }
                         @include responsive(tab-land) { // width < 1200?
                             height: 190px!important;
                         }
                         @include responsive(tab-land-1) { // width < 1024?
                             width: 512px!important
                         }
-                        // @include responsive(tab-port) { // width < 1200?
-                        //     height: 170px!important;
-                        //     width: 521px!important;
-                        // }
                         @include responsive(tab-port) { // width < 1200?
                             width: 430px!important;
                             height: 170px!important;
@@ -263,6 +272,14 @@ body{
                         @include responsive(tab-port-1) { // width < 1200?
                             width: 416px!important;
                             height: 185px!important;
+                        }
+                        @include responsive(phone-1) { // width < 480?
+                            width: 400px!important;
+                            height: 170px!important;
+                        }
+                        @include responsive(iphone-1) { // width < 480?
+                            width: 275px!important;
+                            height: 145px!important;
                         }
                     }
                     #circleChart{
@@ -277,6 +294,10 @@ body{
                         @include responsive(phone) { // width < 600?
                             width: 227px!important;
                             height: 118px!important;
+                        }
+                        @include responsive(iphone-1) { // width < 320?
+                            width: 194px!important;
+                            height: 91px!important;
                         }
                     }
                 }
