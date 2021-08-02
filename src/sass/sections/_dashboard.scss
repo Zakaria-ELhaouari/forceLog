@@ -58,6 +58,9 @@ body{
                     height: 1rem;
                     font-size: 1.2rem;
                     margin-right: 2rem;
+                    @include responsive(phone) { // width < 600?
+                        font-size: 1rem;
+                    }
                 }
                 .form-control-feedback {
                     position: absolute;
@@ -84,6 +87,9 @@ body{
                     @include responsive(big-desktop) { // width < 1800?
                         right: 45rem;
                     }
+                    @include responsive(phone) { // width < 600?
+                        right: 22rem !important;
+                    }
                 }
                 input{
                     border: none;
@@ -94,6 +100,11 @@ body{
                     color: #dedede;
                     @include responsive(tab-port-1) { // width < 800?
                         width: 40%;
+                    }
+                    @include responsive(phone) { // width < 600?
+                        margin-right: 0rem;
+                        width: 35%;
+                        font-size: 1rem;
                     }
                 }
             }
@@ -122,6 +133,10 @@ body{
                 @include responsive(tab-land) { // width < 1200?
                     grid-auto-rows:31rem;
                 }
+                @include responsive(phone) { // width < 600?
+                    grid-template-columns: 1fr;
+                    padding-bottom: 1rem;
+                }
                 .barChart{
                     margin-right: 1rem;
                     width: 85%;
@@ -144,6 +159,11 @@ body{
                 .circleBar{
                     width: 93%;
                     padding: 1rem 0 0rem 0rem;
+                    @include responsive(phone) { // width < 600?
+                        margin-left: 2rem;
+                        padding: 1rem 0 0;
+                        margin-top: 1rem;
+                    }
                     .titre{
                         line-height: 1.7;
                     }
@@ -159,6 +179,9 @@ body{
                         }
                         @include responsive(small-desktop) { 
                             padding: 3rem 3rem 0;
+                        }
+                        @include responsive(phone) { // width < 600?
+                            padding: 2rem 8rem 0;
                         }
                         .livre{
                             display: flex;
@@ -251,6 +274,10 @@ body{
                             width: 195px!important;
                             height: 110px!important;
                         }
+                        @include responsive(phone) { // width < 600?
+                            width: 227px!important;
+                            height: 118px!important;
+                        }
                     }
                 }
             }
@@ -258,6 +285,9 @@ body{
             .secondLineChart{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                @include responsive(phone) { // width < 600?
+                    grid-template-columns: 1fr;
+                }
                 .statistique {
                     background-color: white;
                     border-radius: 10px;
@@ -271,6 +301,9 @@ body{
                     @include responsive(tab-port-1) { // width < 800?
                         margin-left: 2rem;
                         padding: 1rem;
+                    }
+                    @include responsive(phone) { // width < 600?
+                        width: 90%;
                     }
                     
                     // margin: 1em;
@@ -347,6 +380,10 @@ body{
                         width: 84%;
                         margin-top: 1em;
                         margin-left: 6em;
+                    }
+                    @include responsive(phone) { // width < 600?
+                        width: 93%;
+                        margin-left: 2rem;
                     }
                     .facturation{
                         &:hover{
